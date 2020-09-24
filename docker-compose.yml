@@ -1,0 +1,17 @@
+version: "3"
+services:
+  php:
+    build: .
+    user: 1000:1000
+    volumes:
+      - .:/var/www/html
+
+  nginx:
+    image: nginx:1.19.2-alpine
+    volumes:
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+      - ./docker/nginx/logs:/var/log/nginx/
+    ports:
+      - 8080:8080
+    depends_on: 
+      - php
