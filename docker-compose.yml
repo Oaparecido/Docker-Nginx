@@ -9,8 +9,8 @@ services:
   nginx:
     image: nginx:1.19.2-alpine
     volumes:
-      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
-      - ./docker/nginx/logs:/var/log/nginx/
+      - ./.docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+      - ./.docker/nginx/logs:/var/log/nginx/
     ports:
       - 8080:8080
     depends_on: 

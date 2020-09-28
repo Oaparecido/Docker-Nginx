@@ -1,0 +1,1 @@
+2020/09/24 01:43:22 [error] 33#33: *2 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.26.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "localhost:8080"
